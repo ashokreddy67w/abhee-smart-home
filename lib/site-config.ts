@@ -4,9 +4,9 @@ export const SITE = {
   url: "https://www.smartliv.io",
   description:
     "Premium smart home automation, home theatre, security and lifestyle systems — designed and installed across Andhra Pradesh, Hyderabad, Vijayawada, Bangalore and Chennai.",
-  phone: "+91-00000-00000",
-  email: "hello@smartliv.io",
-  founded: "2014",
+  phone: "+91-9248123456",
+  email: "info.abheesmarthome@gmail.com",
+  founded: "2013",
   address: {
     streetAddress: "Plot 12, Tech Corridor",
     addressLocality: "Vijayawada",
