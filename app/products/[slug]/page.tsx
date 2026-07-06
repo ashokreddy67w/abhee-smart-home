@@ -17,12 +17,21 @@ import {
   speakableSchema,
 } from "@/lib/schema";
 
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const product = getProductBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
   if (!product) return {};
   const url = `${SITE.url}/products/${product.slug}`;
   return {
@@ -45,8 +54,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductPage({
+  params,
+}: PageProps) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
   if (!product) notFound();
 
   const related = PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
@@ -83,14 +95,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p id="product-intro" className="mt-5 max-w-md text-[15px] leading-relaxed ttext-white/65">
+            <p id="product-intro" className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
               {product.intro}
             </p>
           </Reveal>
           <Reveal delay={240}>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] ttext-white transition-all duration-300 hover:bg-[#3F5D84]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#3F5D84]"
             >
               <Phone size={15} /> Get a quote
             </Link>
@@ -117,7 +129,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           <span className="font-mono text-[11px] tracking-[0.2em] text-brand-green">WHAT'S INCLUDED</span>
           <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
             {product.highlights.map((h) => (
-              <li key={h} className="flex items-start gap-3 border-b border-white/[0.06] pb-4 text-[15px] ttext-white/80">
+              <li key={h} className="flex items-start gap-3 border-b border-white/[0.06] pb-4 text-[15px] text-white/80">
                 <ArrowRight size={15} className="mt-1 flex-none text-[#5877BC]" /> {h}
               </li>
             ))}
@@ -133,7 +145,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             {product.faqs.map((f) => (
               <div key={f.q} className="py-5">
                 <h3 className="font-serif text-[18px] font-light">{f.q}</h3>
-                <p className="mt-2 max-w-2xl text-[14px] leading-relaxed ttext-white/60">{f.a}</p>
+                <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-white/60">{f.a}</p>
               </div>
             ))}
           </div>
@@ -143,14 +155,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       {/* Cities served — internal linking for local SEO */}
       <section className="border-t border-white/[0.06] px-6 py-12 sm:px-10">
         <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-3">
-          <span className="text-[12px] uppercase tracking-[0.14em] ttext-white/40">
+          <span className="text-[12px] uppercase tracking-[0.14em] text-white/40">
             {product.title} installed in:
           </span>
           {CITIES.map((c) => (
             <Link
               key={c.slug}
               href={`/locations/${c.slug}`}
-              className="border border-white/15 px-3 py-1.5 text-[12px] ttext-white/70 transition-colors hover:border-[#5877BC] hover:text-[#5877BC]"            >
+              className="border border-white/15 px-3 py-1.5 text-[12px] text-white/70 transition-colors hover:border-[#5877BC] hover:text-[#5877BC]"            >
               {c.name}
             </Link>
           ))}

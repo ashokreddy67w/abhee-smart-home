@@ -11,18 +11,36 @@ export function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = getArticleBySlug(params.slug);
-  if (!article) return {};
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const article = getArticleBySlug(slug);
+
+  if (!article) {
+    return {};
+  }
+
   return {
     title: article.metaTitle,
     description: article.metaDescription,
-    alternates: { canonical: `${SITE.url}/blog/${article.slug}` },
+    alternates: {
+      canonical: `${SITE.url}/blog/${article.slug}`,
+    },
   };
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = getArticleBySlug(params.slug);
+export default async function ArticlePage({ params }: PageProps) {
+  const { slug } = await params;
+
+  const article = getArticleBySlug(slug);
   if (!article) notFound();
 
   const articleSchema = {
@@ -63,7 +81,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {article.qa.map((item) => (
             <Reveal key={item.q} className="py-6">
               <h2 className="font-serif text-[20px] font-light">{item.q}</h2>
-              <p className="mt-2 text-[15px] leading-relaxed ttext-white/65">{item.a}</p>
+       <p className="mt-2 text-[15px] leading-relaxed text-white/65">
+  {item.a}
+</p>
             </Reveal>
           ))}
         </div>
