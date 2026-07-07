@@ -15,7 +15,7 @@ export const ARTICLES: Article[] = [
     slug: "how-much-does-smart-home-automation-cost-in-india",
     title: "How Much Does Smart Home Automation Cost in India?",
     excerpt: "A straight answer on budgets, from a single smart lock to a full villa build.",
-    heroImage: "https://picsum.photos/seed/abhee-blog-cost/1800/1000",
+    heroImage: "/images/blog/how-much-does-smart-home-automation-cost-in-india/hero.jpg",
     heroImageAlt: "Smart home automation control panel in an Indian villa",
     publishedAt: "2026-06-15",
     metaTitle: "How Much Does Smart Home Automation Cost in India? | ABHEE Smart Liv",

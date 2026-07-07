@@ -6,7 +6,9 @@ export const SITE = {
     "Premium smart home automation, home theatre, security and lifestyle systems — designed and installed across Andhra Pradesh, Hyderabad, Vijayawada, Bangalore and Chennai.",
   phone: "+91-9248123456",
   email: "info.abheesmarthome@gmail.com",
-  founded: "2013",
+  founded: "2008",
+  yearsOfExcellence: "18+",
+  projectsCompleted: "5,000+",
   address: {
     streetAddress: "Plot 12, Tech Corridor",
     addressLocality: "Vijayawada",
@@ -24,5 +26,13 @@ export const SITE = {
     "https://www.linkedin.com/company/smartliv",
     "https://www.youtube.com/@smartliv",
   ],
-  cities: ["Hyderabad", "Vijayawada", "Bangalore", "Chennai"],
+  cities: [
+    "Hyderabad",
+    "Vijayawada",
+    "Bangalore",
+    "Chennai",
+    "Tirupati",
+    "Ongole",
+    "Visakhapatnam",
+  ],
 };

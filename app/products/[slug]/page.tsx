@@ -6,6 +6,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import { PRODUCTS, getProductBySlug } from "@/lib/products-data";
 import { SITE } from "@/lib/site-config";
 import { CITIES } from "@/lib/cities-data";
+import { getSolutionBySlug } from "@/lib/solutions-data";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import ProductCard from "@/components/ProductCard";
@@ -62,6 +63,9 @@ export default async function ProductPage({
   if (!product) notFound();
 
   const related = PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const industries = product.industriesServed
+    .map((s) => getSolutionBySlug(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
     <>
@@ -80,13 +84,13 @@ export default async function ProductPage({
       />
 
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
+      <section className="relative flex min-h-[80svh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
         <Image src={product.heroImage} alt={product.heroImageAlt} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
         <div className="relative mx-auto w-full max-w-[1440px]">
           <Reveal>
             <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
-              {product.category.toUpperCase()} · {product.n}/13
+              {product.category.toUpperCase()} · {product.n}/{PRODUCTS.length}
             </span>
           </Reveal>
           <Reveal delay={80}>
@@ -102,7 +106,7 @@ export default async function ProductPage({
           <Reveal delay={240}>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#3F5D84]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#5877BC] min-h-[44px] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#3F5D84]"
             >
               <Phone size={15} /> Get a quote
             </Link>
@@ -123,6 +127,14 @@ export default async function ProductPage({
         </div>
       </section>
 
+      {/* Overview */}
+      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">OVERVIEW</span>
+          <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-slate-700">{product.overview}</p>
+        </div>
+      </section>
+
       {/* Highlights — short list, not paragraphs */}
       <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
         <div className="mx-auto max-w-[1440px]">
@@ -136,6 +148,56 @@ export default async function ProductPage({
           </ul>
         </div>
       </section>
+
+      {/* Applications */}
+      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">APPLICATIONS</span>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {product.applications.map((a) => (
+              <span key={a} className="border border-slate-300 px-3 py-1.5 text-[12px] text-slate-700">
+                {a}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Installation process */}
+      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">INSTALLATION PROCESS</span>
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-4">
+            {product.installationProcess.map((step) => (
+              <Reveal key={step.step}>
+                <span className="font-serif text-[32px] font-light text-[#5877BC]">{step.step}</span>
+                <h3 className="mt-2 font-serif text-[18px] font-light text-slate-900">{step.title}</h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-slate-600">{step.description}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries served */}
+      {industries.length > 0 && (
+        <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+          <div className="mx-auto max-w-[1440px]">
+            <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">INDUSTRIES SERVED</span>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {industries.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/solutions/${s.slug}`}
+                  className="border border-slate-300 px-3 py-1.5 text-[12px] text-slate-700 transition-colors hover:border-[#5877BC] hover:text-[#5877BC]"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ — also serves as GEO / AI-answer content */}
       <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
@@ -179,6 +241,27 @@ export default async function ProductPage({
               <ProductCard key={r.slug} product={r} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative flex min-h-[50svh] items-center overflow-hidden border-t border-white/[0.06] px-6 sm:px-10">
+        <div className="absolute inset-0 bg-[#0F172A]" />
+        <div className="relative mx-auto w-full max-w-[1440px] py-16">
+          <Reveal>
+            <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">START YOUR PROJECT</span>
+            <h2 className="mt-4 max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight text-white sm:text-[40px]">
+              Book a site visit for {product.title.toLowerCase()}
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center gap-2 bg-brand-green min-h-[44px] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <Phone size={15} /> Book a home visit
+            </Link>
+          </Reveal>
         </div>
       </section>
     </>

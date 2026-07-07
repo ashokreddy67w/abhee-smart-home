@@ -3,18 +3,36 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Product } from "@/lib/products-data";
 
+type CardItem = {
+  slug: string;
+  heroImage: string;
+  heroImageAlt: string;
+  title: string;
+  line: string;
+  n?: string;
+};
+
 export default function ProductCard({
   product,
   aspect = "aspect-[3/4] sm:aspect-[4/5]",
   priority = false,
+  href,
+  badge,
 }: {
-  product: Product;
+  product: CardItem | Product;
   aspect?: string;
   priority?: boolean;
+  /** Override the default `/products/[slug]` link — used when reusing this card for services, solutions, projects & brands. */
+  href?: string;
+  /** Override the numbered badge (or pass null to hide it) — defaults to `product.n` when present. */
+  badge?: string | null;
 }) {
+  const linkHref = href ?? `/products/${product.slug}`;
+  const badgeText = badge !== undefined ? badge : product.n;
+
   return (
     <Link
-      href={`/products/${product.slug}`}
+      href={linkHref}
       className={`group relative block w-full ${aspect} overflow-hidden rounded-3xl bg-[#0F172A] shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl`}
     >
       <Image
@@ -28,10 +46,12 @@ export default function ProductCard({
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-      {/* Number */}
-      <span className="absolute left-4 top-4 rounded-full bg-[#5877BC]/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-md backdrop-blur-sm">
-        {product.n}
-      </span>
+      {/* Number / badge */}
+      {badgeText && (
+        <span className="absolute left-4 top-4 rounded-full bg-[#5877BC]/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-md backdrop-blur-sm">
+          {badgeText}
+        </span>
+      )}
 
       {/* Content */}
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">

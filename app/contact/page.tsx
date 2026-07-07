@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col justify-end overflow-hidden px-6 pb-16 pt-32 sm:px-10">
+    <section className="relative flex min-h-[90svh] flex-col justify-end overflow-hidden px-6 pb-16 pt-32 sm:px-10">
       <Image
-        src="https://picsum.photos/seed/abhee-contact-hero/2200/1400"
+        src="/images/contact/hero.jpg"
         alt="ABHEE design consultant reviewing a smart home plan"
         fill
         priority
@@ -34,13 +34,13 @@ export default function ContactPage() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={`tel:${SITE.phone}`}
-             className="flex items-center gap-2 rounded-full bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#3F5D84]"
+             className="flex items-center gap-2 rounded-full bg-[#5877BC] min-h-[44px] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#3F5D84]"
             >
               <Phone size={15} /> {SITE.phone}
             </a>
             <a
               href={`mailto:${SITE.email}`}
-             className="flex items-center gap-2 rounded-full border border-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-[#5877BC] transition-all duration-300 hover:bg-[#5877BC] hover:text-white"
+             className="flex items-center gap-2 rounded-full border border-[#5877BC] min-h-[44px] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-[#5877BC] transition-all duration-300 hover:bg-[#5877BC] hover:text-white"
             >
               <Mail size={15} /> {SITE.email}
             </a>

@@ -10,7 +10,7 @@ export function organizationSchema() {
     name: SITE.name,
     alternateName: SITE.shortName,
     url: SITE.url,
-    logo: `${SITE.url}/logo.png`,
+    logo: `${SITE.url}/images/newlogos.png`,
     foundingDate: SITE.founded,
     sameAs: SITE.sameAs,
     contactPoint: [
@@ -86,19 +86,32 @@ export function productSchema(product: Product) {
 }
 
 export function serviceSchema(product: Product) {
+  return genericServiceSchema(
+    { title: product.title, metaDescription: product.metaDescription, slug: product.slug },
+    "products",
+    `${product.title} Installation`
+  );
+}
+
+/** Reusable Service schema for any {title, metaDescription, slug} item — products, services, solutions. */
+export function genericServiceSchema(
+  item: { title: string; metaDescription: string; slug: string },
+  urlSegment: string,
+  serviceName?: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: product.title,
-    name: `${product.title} Installation`,
-    description: product.metaDescription,
+    serviceType: item.title,
+    name: serviceName ?? item.title,
+    description: item.metaDescription,
     provider: {
       "@type": "Organization",
       name: SITE.name,
       url: SITE.url,
     },
     areaServed: SITE.cities.map((c) => ({ "@type": "City", name: c })),
-    url: `${SITE.url}/products/${product.slug}`,
+    url: `${SITE.url}/${urlSegment}/${item.slug}`,
   };
 }
 
