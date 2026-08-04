@@ -6,7 +6,7 @@ import MobileNav from "@/components/MobileNav";
 export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto grid min-h-[92px] max-w-[1440px] grid-cols-[1fr_auto] items-center px-6 sm:min-h-[104px] sm:px-10 lg:min-h-[120px] lg:grid-cols-[1fr_auto_1fr] lg:px-10 xl:min-h-[128px] xl:px-12">
+      <div className="mx-auto grid min-h-[92px] max-w-[1440px] grid-cols-[1fr_auto] items-center px-5 md:min-h-[104px] md:px-10 lg:min-h-[120px] lg:grid-cols-[1fr_auto_1fr] lg:px-10 xl:min-h-[128px] xl:px-12">
         <Link href="/" className="flex items-center justify-self-start" aria-label={`${SITE.name} home`}>
           <Image
             src="/images/newlogo-header.png"
@@ -14,7 +14,7 @@ export default function Header() {
             width={1735}
             height={453}
             priority
-            className="h-auto w-[190px] sm:w-[220px] lg:w-[248px] xl:w-[292px]"
+            className="h-[42px] w-auto md:h-auto md:w-[220px] lg:w-[248px] xl:w-[292px]"
           />
         </Link>
         <nav className="hidden items-center gap-5 lg:flex xl:gap-7">

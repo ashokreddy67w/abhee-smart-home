@@ -25,11 +25,7 @@ export default function WhatsAppButton() {
 
   return (
     <div
-      className="fixed z-[60] flex flex-col items-end gap-2"
-      style={{
-        bottom: "calc(1.25rem + env(safe-area-inset-bottom))",
-        right: "calc(1.25rem + env(safe-area-inset-right))",
-      }}
+      className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-[calc(1.25rem+env(safe-area-inset-right))] z-[60] hidden flex-col items-end gap-2 md:flex"
     >
       {showTooltip && (
         <div

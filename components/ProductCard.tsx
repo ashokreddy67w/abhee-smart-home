@@ -33,7 +33,7 @@ export default function ProductCard({
   return (
     <Link
       href={linkHref}
-      className={`group relative block w-full ${aspect} overflow-hidden rounded-3xl bg-[#0F172A] shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl`}
+      className={`group relative block h-[320px] w-full ${aspect} overflow-hidden rounded-3xl bg-[#0F172A] shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl md:h-auto`}
     >
       <Image
         src={product.heroImage}
@@ -44,26 +44,26 @@ export default function ProductCard({
         className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10 md:from-black/90 md:via-black/20 md:to-transparent" />
 
       {/* Number / badge */}
       {badgeText && (
-        <span className="absolute left-4 top-4 rounded-full bg-[#5877BC]/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-md backdrop-blur-sm">
+        <span className="absolute left-6 top-6 rounded-full bg-[#5877BC]/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-md backdrop-blur-sm md:left-4 md:top-4">
           {badgeText}
         </span>
       )}
 
       {/* Content */}
-      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
-        <h3 className="font-serif text-[18px] font-light leading-tight tracking-tight text-white sm:text-[28px]">
+      <div className="absolute inset-x-0 bottom-0 flex h-[210px] min-w-0 flex-col overflow-hidden px-6 pb-6 pt-5 md:block md:h-auto md:p-8">
+        <h3 className="line-clamp-2 min-w-0 font-serif text-[16px] font-light leading-[1.25] tracking-tight text-white md:line-clamp-none md:text-[28px] md:leading-tight">
           {product.title}
         </h3>
 
-        <p className="mt-2 max-w-[92%] text-[12px] leading-6 text-white/80 sm:mt-3 sm:text-[14px] sm:leading-relaxed">
+        <p className="mt-4 line-clamp-2 min-w-0 text-[13px] leading-5 text-white/80 md:mt-3 md:line-clamp-none md:max-w-[92%] md:text-[14px] md:leading-relaxed">
           {product.line}
         </p>
 
-        <span className="mt-4 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#84A6D9] transition-colors duration-300 group-hover:text-white sm:mt-5 sm:text-[13px]">
+        <span className="mt-auto inline-flex items-center gap-2 pt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#84A6D9] transition-colors duration-300 group-hover:text-white md:mt-5 md:pt-0 md:text-[13px]">
           Explore
           <ArrowRight
             size={16}
