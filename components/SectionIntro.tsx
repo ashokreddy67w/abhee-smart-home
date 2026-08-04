@@ -26,12 +26,12 @@ export default function SectionIntro({
         {label}
       </span>
 
-      <h2 className="max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight ttext-white sm:text-[40px]">
+      <h2 className="max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight text-white sm:text-[40px]">
         {title}
       </h2>
 
       {sentence && (
-        <p className="max-w-md text-[15px] leading-relaxed ttext-white/70">
+        <p className="max-w-md text-[15px] leading-relaxed text-white/70">
           {sentence}
         </p>
       )}

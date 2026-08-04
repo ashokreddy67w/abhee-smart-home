@@ -116,7 +116,7 @@ export default function MobileNav() {
       role="dialog"
       aria-modal="true"
       aria-label="Site navigation"
-      className={`fixed inset-0 z-[70] flex h-[100dvh] w-screen flex-col overflow-y-auto bg-white md:hidden ${
+      className={`fixed inset-0 z-[70] flex h-[100dvh] w-screen flex-col overflow-y-auto bg-white lg:hidden ${
         open ? "opacity-100" : "opacity-0"
       }`}
       style={{
@@ -194,7 +194,7 @@ export default function MobileNav() {
         aria-label="Open menu"
         aria-expanded={mounted}
         aria-controls="mobile-nav-panel"
-        className="flex h-11 w-11 items-center justify-center text-black/70 transition-colors hover:text-[#5877BC] md:hidden"
+        className="flex h-11 w-11 items-center justify-center justify-self-end text-black/70 transition-colors hover:text-[#5877BC] lg:hidden"
       >
         <Menu size={26} />
       </button>
