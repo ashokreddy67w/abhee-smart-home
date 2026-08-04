@@ -74,7 +74,7 @@ export default function HomePage() {
       />
 
       {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO ---------------- */}
-      <section className="relative flex min-h-[78svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[94svh] md:px-10 md:pb-14 md:pt-32">
+      <section className="hero-enter relative flex min-h-[78svh] flex-col justify-end overflow-hidden bg-black px-6 pb-12 pt-28 md:min-h-[94svh] md:px-10 md:pb-14 md:pt-32">
         <Image
           src="/images/home/hero.jpg"
           alt="A premium automated residence at night, lit entirely by ABHEE smart lighting"
@@ -84,32 +84,24 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
         <div className="relative mx-auto w-full max-w-[1440px]">
-          <Reveal>
-            <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
-              {PRODUCTS.length} SYSTEMS · ONE HOME
-            </span>
-          </Reveal>
-          <Reveal delay={80}>
-            <h1
-              id="hero-headline"
-              className="mt-5 max-w-3xl font-serif text-[42px] font-light leading-[1.05] tracking-tight sm:text-[64px] lg:text-[76px]"
-            >
-              The complete premium smart home.
-            </h1>
-          </Reveal>
-          <Reveal delay={160}>
-            <p id="hero-sentence" className="mt-5 max-w-md text-[15px] leading-relaxed text-white/75 sm:text-[16px]">
-              Automation, theatre, security and lifestyle systems, designed as one build.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <Link
-              href="/products"
-             className="mt-8 inline-flex items-center gap-2 bg-[#5877BC] min-h-[44px] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
-            >
-              Explore all products <ArrowRight size={15} />
-            </Link>
-          </Reveal>
+          <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
+            {PRODUCTS.length} SYSTEMS · ONE HOME
+          </span>
+          <h1
+            id="hero-headline"
+            className="mt-5 max-w-3xl font-serif text-[42px] font-light leading-[1.05] tracking-tight sm:text-[64px] lg:text-[76px]"
+          >
+            The complete premium smart home.
+          </h1>
+          <p id="hero-sentence" className="mt-5 max-w-md text-[15px] leading-relaxed text-white/75 sm:text-[16px]">
+            Automation, theatre, security and lifestyle systems, designed as one build.
+          </p>
+          <Link
+            href="/products"
+            className="mt-8 inline-flex min-h-[44px] items-center gap-2 bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            Explore all products <ArrowRight size={15} />
+          </Link>
         </div>
       </section>
 
@@ -132,7 +124,7 @@ export default function HomePage() {
               >
                 <ProductCard
                   product={p}
-                  aspect={i === 0 ? "aspect-square sm:aspect-auto sm:h-full" : "aspect-[4/5]"}
+                  aspect={i === 0 ? "aspect-square sm:aspect-auto sm:!h-full" : "aspect-[4/5]"}
                   priority={i < 2}
                 />
               </Reveal>
