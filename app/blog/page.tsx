@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   return (
-    <section className="px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
+    <section className="px-6 pb-12 pt-28 md:px-10 md:pb-16 md:pt-40">
       <div className="mx-auto max-w-[1440px]">
         <Reveal>
           <SectionIntro
@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
           />
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-10">
           {ARTICLES.map((a) => (
             <Reveal key={a.slug}>
               <Link href={`/blog/${a.slug}`} className="group block">

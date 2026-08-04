@@ -23,7 +23,7 @@ export default function BrandsPage() {
           { name: "Brands", url: `${SITE.url}/brands` },
         ])}
       />
-      <section className="px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
+      <section className="px-6 pb-12 pt-28 md:px-10 md:pb-16 md:pt-40">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -33,7 +33,7 @@ export default function BrandsPage() {
             />
           </Reveal>
 
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-10">
             {BRANDS.map((b, i) => (
               <Reveal key={b.slug} delay={(i % 3) * 60}>
                 <div className="flex flex-col items-center gap-4 border border-slate-200 p-8 text-center">

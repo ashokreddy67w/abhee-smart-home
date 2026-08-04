@@ -41,7 +41,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
         ))}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 md:mt-10">
         {filtered.map((p, i) => (
           <Reveal key={p.slug} delay={(i % 3) * 60}>
             <ProductCard product={p} priority={i < 3} />

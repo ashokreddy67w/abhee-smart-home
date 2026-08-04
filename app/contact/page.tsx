@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="relative flex min-h-[90svh] flex-col justify-end overflow-hidden px-6 pb-16 pt-32 sm:px-10">
+    <section className="relative flex min-h-[72svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[90svh] md:px-10 md:pb-16 md:pt-32">
       <Image
         src="/images/contact/hero.jpg"
         alt="ABHEE design consultant reviewing a smart home plan"

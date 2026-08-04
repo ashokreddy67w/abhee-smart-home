@@ -23,7 +23,7 @@ export default function ServicesIndexPage() {
           { name: "Services", url: `${SITE.url}/services` },
         ])}
       />
-      <section className="px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
+      <section className="px-6 pb-12 pt-28 md:px-10 md:pb-16 md:pt-40">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -33,7 +33,7 @@ export default function ServicesIndexPage() {
             />
           </Reveal>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 md:mt-10">
             {SERVICES.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 60}>
                 <ProductCard

@@ -37,7 +37,7 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      <div className="mt-10 space-y-12">
+      <div className="mt-8 space-y-12 md:mt-10">
         {categories.map((c) => (
           <div key={c.slug}>
             <h2 className="font-serif text-[22px] font-light text-slate-900">{c.name}</h2>

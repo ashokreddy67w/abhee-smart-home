@@ -74,7 +74,7 @@ export default function HomePage() {
       />
 
       {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO ---------------- */}
-      <section className="relative flex min-h-[94svh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
+      <section className="relative flex min-h-[78svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[94svh] md:px-10 md:pb-14 md:pt-32">
         <Image
           src="/images/home/hero.jpg"
           alt="A premium automated residence at night, lit entirely by ABHEE smart lighting"
@@ -114,7 +114,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 2. FULL CATALOGUE — ALL 13, IMMEDIATELY ---------------- */}
-      <section className="px-6 py-16 sm:px-10 sm:py-20">
+      <section className="px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -123,7 +123,7 @@ export default function HomePage() {
               sentence={`${PRODUCTS.length} premium categories, each built to work together.`}
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 md:mt-10">
             {bento.map((p, i) => (
               <Reveal
                 key={p.slug}
@@ -142,8 +142,8 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 3. 2-COLUMN EDITORIAL ---------------- */}
-      <section className="border-t border-white/[0.06] px-6 py-16 sm:px-10 sm:py-24">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 lg:grid-cols-2">
+      <section className="border-t border-white/[0.06] px-6 py-12 md:px-10 md:py-24">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-6 md:gap-10 lg:grid-cols-2">
           <Reveal className="relative aspect-[4/3] w-full overflow-hidden lg:aspect-[3/4]">
             <Image
               src="/images/home/editorial.jpg"
@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 4. HORIZONTAL CINEMATIC GALLERY ---------------- */}
-      <section className="border-t border-white/[0.06] py-16 sm:py-24">
+      <section className="border-t border-white/[0.06] py-12 md:py-24">
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10">
           <Reveal>
             <SectionIntro
@@ -176,7 +176,7 @@ export default function HomePage() {
           </Reveal>
         </div>
         <Reveal delay={100}>
-          <div className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 sm:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:mt-10 md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {atmosphere.map((a) => (
               <div key={a.src} className="relative h-[420px] w-[85vw] flex-none snap-start overflow-hidden sm:w-[520px]">
                 <Image src={a.src} alt={a.alt} fill sizes="520px" className="object-cover" />
@@ -187,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 5. FULL-WIDTH CINEMATIC BANNER ---------------- */}
-      <section className="relative flex h-[70svh] items-end overflow-hidden border-t border-white/[0.06] px-6 pb-14 sm:px-10">
+      <section className="relative flex h-[52svh] items-end overflow-hidden border-t border-white/[0.06] px-6 pb-12 md:h-[70svh] md:px-10 md:pb-14">
         <Image
           src="/images/home/banner-security.jpg"
           alt="AI CCTV camera monitoring a villa perimeter at dusk"
@@ -209,7 +209,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 6. ASYMMETRICAL IMAGE BLOCKS ---------------- */}
-      <section className="border-t border-white/[0.06] px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-white/[0.06] px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -220,7 +220,7 @@ export default function HomePage() {
               ctaHref="/locations"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-12">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-12 md:mt-10">
             <Reveal className="sm:col-span-7">
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
@@ -242,7 +242,7 @@ export default function HomePage() {
               </div>
             </Reveal>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-4 md:mt-10">
             {whyAbhee.map((w) => (
               <Reveal key={w.title}>
                 <h3 className="font-serif text-[18px] font-light text-slate-900">{w.title}</h3>
@@ -254,14 +254,14 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7. TRUST NUMBERS (minimal, image-backed) ---------------- */}
-      <section className="relative overflow-hidden border-t border-white/[0.06] px-6 py-20 sm:px-10">
+      <section className="relative overflow-hidden border-t border-white/[0.06] px-6 py-12 md:px-10 md:py-20">
         <Image
           src="/images/home/stats-bg.jpg"
           alt="Premium home theatre installation by ABHEE"
           fill
           className="object-cover opacity-25"
         />
-        <div className="relative mx-auto grid max-w-[1440px] grid-cols-2 gap-8 sm:grid-cols-4">
+        <div className="relative mx-auto grid max-w-[1440px] grid-cols-2 gap-6 sm:grid-cols-4 md:gap-8">
           {[
             [SITE.yearsOfExcellence, "Years of excellence"],
             [SITE.projectsCompleted, "Projects completed"],
@@ -279,7 +279,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7B. FEATURED SERVICES ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -290,7 +290,7 @@ export default function HomePage() {
               ctaHref="/services"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 md:mt-10">
             {SERVICES.slice(0, 3).map((s, i) => (
               <Reveal key={s.slug} delay={i * 80}>
                 <ProductCard
@@ -305,7 +305,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7C. INDUSTRIES WE SERVE ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -316,7 +316,7 @@ export default function HomePage() {
               ctaHref="/solutions"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-6">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-6 md:mt-10">
             {SOLUTIONS.slice(0, 6).map((s, i) => (
               <Reveal key={s.slug} delay={i * 60}>
                 <ProductCard
@@ -332,7 +332,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7D. FEATURED PROJECTS ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -343,7 +343,7 @@ export default function HomePage() {
               ctaHref="/projects"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 md:mt-10">
             {PROJECTS.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 80}>
                 <ProductCard
@@ -358,12 +358,12 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7E. TESTIMONIALS ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro label="Testimonials" title="What clients tell us" />
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3 md:mt-10 md:gap-8">
             {PROJECTS.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 80}>
                 <Quote size={22} className="text-[#5877BC]" />
@@ -376,7 +376,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7F. GALLERY PREVIEW ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -387,7 +387,7 @@ export default function HomePage() {
               ctaHref="/gallery"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-6">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-6 md:mt-10">
             {GALLERY_CATEGORIES.slice(0, 6).map((c) => (
               <Link key={c.slug} href="/gallery" className="group relative block aspect-square overflow-hidden">
                 <Image
@@ -406,7 +406,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7G. BRANDS ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -416,7 +416,7 @@ export default function HomePage() {
               ctaHref="/brands"
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-6">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-6 md:mt-10">
             {BRANDS.map((b) => (
               <div key={b.slug} className="relative h-12">
                 <Image src={b.logo} alt={`${b.name} logo`} fill sizes="150px" className="object-contain" />
@@ -427,12 +427,12 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 7H. FAQ PREVIEW ---------------- */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-24">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro label="FAQ" title="Common questions" ctaLabel="Read more in our Journal" ctaHref="/blog" />
           </Reveal>
-          <div className="mt-10 divide-y divide-slate-200">
+          <div className="mt-8 divide-y divide-slate-200 md:mt-10">
             {homeFaqs.map((f) => (
               <div key={f.q} className="py-5">
                 <h3 className="font-serif text-[18px] font-light text-slate-900">{f.q}</h3>
@@ -444,7 +444,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 8. CONSULTATION CTA ---------------- */}
-      <section className="relative flex min-h-[60svh] items-center overflow-hidden border-t border-white/[0.06] px-6 sm:px-10">
+      <section className="relative flex min-h-[420px] items-center overflow-hidden border-t border-white/[0.06] px-6 md:min-h-[60svh] md:px-10">
         <Image
           src="/images/home/cta-final.jpg"
           alt="A finished ABHEE smart home living room at evening"
@@ -452,7 +452,7 @@ export default function HomePage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/70" />
-        <div className="relative mx-auto w-full max-w-[1440px] py-16">
+        <div className="relative mx-auto w-full max-w-[1440px] py-12 md:py-16">
           <Reveal>
             <SectionIntro
               label="Start your project"

@@ -80,7 +80,7 @@ export default async function SolutionPage({ params }: PageProps) {
       />
 
       {/* Hero */}
-      <section className="relative flex min-h-[80svh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
+      <section className="relative flex min-h-[68svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[80svh] md:px-10 md:pb-14 md:pt-32">
         <Image src={solution.heroImage} alt={solution.heroImageAlt} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
         <div className="relative mx-auto w-full max-w-[1440px]">
@@ -111,7 +111,7 @@ export default async function SolutionPage({ params }: PageProps) {
       </section>
 
       {/* Solutions we provide */}
-      <section className="px-6 py-16 sm:px-10 sm:py-20">
+      <section className="px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">SOLUTIONS WE PROVIDE</span>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -123,7 +123,7 @@ export default async function SolutionPage({ params }: PageProps) {
       </section>
 
       {/* Why points */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <SectionIntro label="Why ABHEE" title={`Why ${solution.name.toLowerCase()} choose us`} />
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-4">
@@ -138,7 +138,7 @@ export default async function SolutionPage({ params }: PageProps) {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">FREQUENTLY ASKED</span>
           <div className="mt-6 divide-y divide-slate-200">
@@ -153,7 +153,7 @@ export default async function SolutionPage({ params }: PageProps) {
       </section>
 
       {/* Other solutions */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">OTHER INDUSTRIES</span>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">

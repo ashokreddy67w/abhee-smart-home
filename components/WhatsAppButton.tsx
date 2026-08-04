@@ -25,12 +25,12 @@ export default function WhatsAppButton() {
 
   return (
     <div
-      className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-[calc(1.25rem+env(safe-area-inset-right))] z-[60] hidden flex-col items-end gap-2 md:flex"
+      className="fixed bottom-[calc(20px+env(safe-area-inset-bottom))] right-[calc(16px+env(safe-area-inset-right))] z-[60] flex flex-col items-end gap-2 md:bottom-[calc(1.25rem+env(safe-area-inset-bottom))] md:right-[calc(1.25rem+env(safe-area-inset-right))]"
     >
       {showTooltip && (
         <div
           role="status"
-          className="animate-whatsapp-tooltip max-w-[210px] rounded-lg bg-[#0F172A] px-4 py-2.5 text-[13px] leading-snug text-white shadow-lg"
+          className="animate-whatsapp-tooltip hidden max-w-[210px] rounded-lg bg-[#0F172A] px-4 py-2.5 text-[13px] leading-snug text-white shadow-lg md:block"
         >
           Need help? Chat with us on WhatsApp
         </div>
@@ -41,7 +41,7 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group relative flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#25D366] shadow-[0_8px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 ease-out hover:scale-110 active:scale-95"
+        className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-[0_8px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 ease-out hover:scale-110 active:scale-95 md:h-[62px] md:w-[62px]"
       >
         <span className="pointer-events-none absolute inset-0 rounded-full bg-[#25D366] animate-whatsapp-pulse" />
         <WhatsAppIcon className="relative h-8 w-8 fill-white" />

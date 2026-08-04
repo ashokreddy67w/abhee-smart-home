@@ -24,7 +24,7 @@ export default function LocationsPage() {
           { name: "Locations", url: `${SITE.url}/locations` },
         ])}
       />
-      <section className="px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
+      <section className="px-6 pb-12 pt-28 md:px-10 md:pb-16 md:pt-40">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -33,7 +33,7 @@ export default function LocationsPage() {
               sentence="ABHEE installs and supports every system in person, not remotely."
             />
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10">
             {CITIES.map((c, i) => (
               <Reveal key={c.slug} delay={i * 80}>
                 <Link href={`/locations/${c.slug}`} className="group relative block aspect-[16/10] w-full overflow-hidden">

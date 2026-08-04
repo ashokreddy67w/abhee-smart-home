@@ -80,7 +80,7 @@ export default async function ServicePage({ params }: PageProps) {
       />
 
       {/* Hero */}
-      <section className="relative flex min-h-[80svh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
+      <section className="relative flex min-h-[68svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[80svh] md:px-10 md:pb-14 md:pt-32">
         <Image src={service.heroImage} alt={service.heroImageAlt} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
         <div className="relative mx-auto w-full max-w-[1440px]">
@@ -109,7 +109,7 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* What's included */}
-      <section className="px-6 py-16 sm:px-10 sm:py-20">
+      <section className="px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">WHAT'S INCLUDED</span>
           <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -123,7 +123,7 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Process */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">HOW IT WORKS</span>
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-4">
@@ -139,7 +139,7 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">FREQUENTLY ASKED</span>
           <div className="mt-6 divide-y divide-slate-200">
@@ -154,7 +154,7 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Related product & solutions */}
-      <section className="border-t border-slate-200 px-6 py-12 sm:px-10">
+      <section className="border-t border-slate-200 px-6 py-10 md:px-10 md:py-12">
         <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-3">
           {relatedProduct && (
             <>
@@ -189,7 +189,7 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Other services */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">MORE SERVICES</span>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -206,9 +206,9 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="relative flex min-h-[50svh] items-center overflow-hidden border-t border-white/[0.06] px-6 sm:px-10">
+      <section className="relative flex min-h-[380px] items-center overflow-hidden border-t border-white/[0.06] px-6 md:min-h-[50svh] md:px-10">
         <div className="absolute inset-0 bg-[#0F172A]" />
-        <div className="relative mx-auto w-full max-w-[1440px] py-16">
+        <div className="relative mx-auto w-full max-w-[1440px] py-12 md:py-16">
           <Reveal>
             <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">START YOUR PROJECT</span>
             <h2 className="mt-4 max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight text-white sm:text-[40px]">

@@ -67,7 +67,7 @@ export default async function ArticlePage({ params }: PageProps) {
           speakableSchema(["#article-headline"]),
         ]}
       />
-      <section className="relative flex min-h-[55svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-32 sm:px-10">
+      <section className="relative flex min-h-[48svh] flex-col justify-end overflow-hidden px-6 pb-10 pt-28 md:min-h-[55svh] md:px-10 md:pb-12 md:pt-32">
         <Image src={article.heroImage} alt={article.heroImageAlt} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
         <div className="relative mx-auto w-full max-w-3xl">
@@ -76,7 +76,7 @@ export default async function ArticlePage({ params }: PageProps) {
           </h1>
         </div>
       </section>
-      <section className="px-6 py-16 sm:px-10">
+      <section className="px-6 py-12 md:px-10 md:py-16">
         <div className="mx-auto max-w-3xl divide-y divide-white/[0.06]">
           {article.qa.map((item) => (
             <Reveal key={item.q} className="py-6">

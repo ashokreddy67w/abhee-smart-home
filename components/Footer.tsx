@@ -6,8 +6,8 @@ import { SERVICES } from "@/lib/services-data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white px-6 py-14 sm:px-10">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-6">
+    <footer className="border-t border-slate-200 bg-white px-6 py-12 md:px-10 md:py-14">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-6 sm:grid-cols-4 md:gap-8 lg:grid-cols-6">
         <div>
           <p className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
             PRODUCTS

@@ -78,7 +78,7 @@ export default async function CityPage({ params }: PageProps) {
         ]}
       />
 
-      <section className="relative flex min-h-[70svh] flex-col justify-end overflow-hidden px-6 pb-14 pt-32 sm:px-10">
+      <section className="relative flex min-h-[62svh] flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:min-h-[70svh] md:px-10 md:pb-14 md:pt-32">
         <Image
           src={city.heroImage}
           alt={city.heroImageAlt}
@@ -117,7 +117,7 @@ export default async function CityPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="px-6 py-16 sm:px-10 sm:py-20">
+      <section className="px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <SectionIntro
             label="Areas we cover"
@@ -129,7 +129,7 @@ export default async function CityPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="border-t border-white/[0.06] px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-white/[0.06] px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
             POPULAR IN {city.name.toUpperCase()}
@@ -146,7 +146,7 @@ export default async function CityPage({ params }: PageProps) {
       </section>
 
       {/* Why choose ABHEE in this city */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <SectionIntro label="Why ABHEE" title={`Why ${city.name} chooses ABHEE`} />
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-4">
@@ -162,7 +162,7 @@ export default async function CityPage({ params }: PageProps) {
 
       {/* Industries we serve */}
       {industries.length > 0 && (
-        <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+        <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
           <div className="mx-auto max-w-[1440px]">
             <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">INDUSTRIES WE SERVE</span>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -181,7 +181,7 @@ export default async function CityPage({ params }: PageProps) {
       )}
 
       {/* FAQ */}
-      <section className="border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20">
+      <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">FREQUENTLY ASKED</span>
           <div className="mt-6 divide-y divide-slate-200">
@@ -196,9 +196,9 @@ export default async function CityPage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="relative flex min-h-[50svh] items-center overflow-hidden border-t border-white/[0.06] px-6 sm:px-10">
+      <section className="relative flex min-h-[380px] items-center overflow-hidden border-t border-white/[0.06] px-6 md:min-h-[50svh] md:px-10">
         <div className="absolute inset-0 bg-[#0F172A]" />
-        <div className="relative mx-auto w-full max-w-[1440px] py-16">
+        <div className="relative mx-auto w-full max-w-[1440px] py-12 md:py-16">
           <Reveal>
             <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">START YOUR PROJECT</span>
             <h2 className="mt-4 max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight text-white sm:text-[40px]">

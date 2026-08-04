@@ -23,7 +23,7 @@ export default function ProductsIndexPage() {
           { name: "Products", url: `${SITE.url}/products` },
         ])}
       />
-      <section className="px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
+      <section className="px-6 pb-12 pt-28 md:px-10 md:pb-16 md:pt-40">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
@@ -33,7 +33,7 @@ export default function ProductsIndexPage() {
             />
           </Reveal>
 
-          <div className="mt-10">
+          <div className="mt-8 md:mt-10">
             <ProductsGrid products={PRODUCTS} />
           </div>
         </div>
