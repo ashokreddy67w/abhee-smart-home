@@ -76,12 +76,12 @@ export default async function ArticlePage({ params }: PageProps) {
           </h1>
         </div>
       </section>
-      <section className="px-6 py-12 md:px-10 md:py-16">
-        <div className="mx-auto max-w-3xl divide-y divide-white/[0.06]">
+      <section className="px-6 py-12 text-slate-900 md:px-10 md:py-16">
+        <div className="mx-auto max-w-3xl divide-y divide-slate-200">
           {article.qa.map((item) => (
             <Reveal key={item.q} className="py-6">
               <h2 className="font-serif text-[20px] font-light">{item.q}</h2>
-       <p className="mt-2 text-[15px] leading-relaxed text-white/65">
+       <p className="mt-2 text-[15px] leading-relaxed text-slate-600">
   {item.a}
 </p>
             </Reveal>
