@@ -10,7 +10,7 @@ export function organizationSchema() {
     name: SITE.name,
     alternateName: SITE.shortName,
     url: SITE.url,
-    logo: `${SITE.url}/images/newlogos.png`,
+    logo: `${SITE.url}/images/newlogo-header.png`,
     foundingDate: SITE.founded,
     sameAs: SITE.sameAs,
     contactPoint: [
