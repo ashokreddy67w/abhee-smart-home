@@ -16,12 +16,12 @@ for (const name of dataFiles) {
   }
 }
 
-const galleryCategories = [
-  "home-theatre", "automation", "cctv", "smart-locks", "lighting", "curtains",
-  "video-door-phone", "boom-barrier", "wooden-flooring", "artificial-lawn", "commercial", "residential",
-];
-for (const category of galleryCategories) {
-  for (let index = 1; index <= 6; index += 1) {
+const galleryCategories = {
+  "home-theatre": 6, automation: 3, cctv: 6, "smart-locks": 6, lighting: 6, curtains: 6,
+  "video-door-phone": 6, "boom-barrier": 6, "wooden-flooring": 6, "artificial-lawn": 6, commercial: 6, residential: 6,
+};
+for (const [category, count] of Object.entries(galleryCategories)) {
+  for (let index = 1; index <= count; index += 1) {
     found.set(`/images/gallery/${category}/${index}.jpg`, `${category.replaceAll("-", " ")} installation, editorial variation ${index}`);
   }
 }

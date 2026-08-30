@@ -141,6 +141,7 @@ export default function HomePage() {
               src="/images/home/editorial.jpg"
               alt="A smart home living room designed for everyday living"
               fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
           </Reveal>

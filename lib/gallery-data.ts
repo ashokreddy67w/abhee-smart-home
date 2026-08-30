@@ -13,7 +13,7 @@ function categoryImages(slug: string, name: string, count: number): { src: strin
 
 export const GALLERY_CATEGORIES: GalleryCategory[] = [
   { slug: "home-theatre", name: "Home Theatre", images: categoryImages("home-theatre", "Home theatre", 6) },
-  { slug: "automation", name: "Automation", images: categoryImages("automation", "Home automation", 6) },
+  { slug: "automation", name: "Automation", images: categoryImages("automation", "Home automation", 3) },
   { slug: "cctv", name: "CCTV", images: categoryImages("cctv", "CCTV surveillance", 6) },
   { slug: "smart-locks", name: "Smart Locks", images: categoryImages("smart-locks", "Smart door lock", 6) },
   { slug: "lighting", name: "Lighting", images: categoryImages("lighting", "Smart lighting", 6) },

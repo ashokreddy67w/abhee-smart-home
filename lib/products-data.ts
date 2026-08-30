@@ -110,11 +110,10 @@ export const PRODUCTS: Product[] = [
     line: "Multi-room sound and event-grade P.A. systems, tuned to every space.",
     category: "Entertainment",
     heroImage: "/images/products/professional-audio/hero.jpg",
-    heroImageAlt: "In-ceiling speakers in a modern luxury living room",
+    heroImageAlt: "Premium stereo speakers and amplifier in a warm modern listening room",
     gallery: [
-      { src: "/images/products/professional-audio/gallery-1.jpg", alt: "Outdoor speakers built into a garden wall" },
-      { src: "/images/products/professional-audio/gallery-2.jpg", alt: "Multi-room audio control panel" },
-      { src: "/images/products/professional-audio/gallery-3.jpg", alt: "P.A. sound system mixing console at a function hall" },
+      { src: "/images/products/professional-audio/gallery-1.jpg", alt: "Premium indoor audio system with floor-standing and centre speakers" },
+      { src: "/images/products/professional-audio/gallery-2.jpg", alt: "Compact professional loudspeaker on a clean studio background" },
     ],
     metaTitle: "Multi-Room Audio & P.A. Sound Systems | ABHEE Smart Liv",
     metaDescription:
@@ -238,8 +237,9 @@ export const PRODUCTS: Product[] = [
     heroImageAlt: "Video door phone mounted beside a front door",
     gallery: [
       { src: "/images/products/video-door-phones/gallery-1.jpg", alt: "Indoor video door phone display screen" },
-      { src: "/images/products/video-door-phones/gallery-2.jpg", alt: "Mobile app showing a live video door phone feed" },
-      { src: "/images/products/video-door-phones/gallery-3.jpg", alt: "Wireless intercom handset in a gated community office" },
+      { src: "/images/products/video-door-phones/gallery-2.jpg", alt: "Wall-mounted video door station with dual cameras and touch controls" },
+      { src: "/images/products/video-door-phones/gallery-3.jpg", alt: "Indoor video intercom monitor installed beside a home entrance" },
+      { src: "/images/products/video-door-phones/gallery-4.jpg", alt: "Video intercom monitor with main door and gate controls" },
     ],
     metaTitle: "Video Door Phones & Intercom Systems | ABHEE Smart Liv",
     metaDescription:
@@ -395,7 +395,7 @@ export const PRODUCTS: Product[] = [
     heroImageAlt: "Large projector screen in a home cinema setup",
     gallery: [
       { src: "/images/products/projectors/gallery-1.jpg", alt: "4K projector mounted on a living room ceiling" },
-      { src: "/images/products/projectors/gallery-2.jpg", alt: "LED display screen at a function hall stage" },
+      { src: "/images/products/projectors/gallery-2.jpg", alt: "Ceiling-mounted projector powering an indoor golf simulator" },
       { src: "/images/products/projectors/gallery-3.jpg", alt: "Podium with speaker and microphone in a school auditorium" },
     ],
     metaTitle: "Projectors, LED Displays & Podium AV Installation | ABHEE Smart Liv",
@@ -432,8 +432,8 @@ export const PRODUCTS: Product[] = [
     title: "Solar Fencing",
     line: "A perimeter that runs on sunlight and never sleeps.",
     category: "Exteriors",
-    heroImage: "/images/products/solar-fencing/hero.jpg",
-    heroImageAlt: "Solar-powered security fencing around a villa perimeter",
+    heroImage: "/images/services/solar-fencing-installation/hero.jpg",
+    heroImageAlt: "Technicians installing electric solar security fencing along a residential boundary wall",
     gallery: [
       { src: "/images/products/solar-fencing/gallery-1.jpg", alt: "Close-up of solar fence energizer unit" },
       { src: "/images/products/solar-fencing/gallery-2.jpg", alt: "Solar fencing along a gated community boundary wall" },
@@ -472,6 +472,7 @@ export const PRODUCTS: Product[] = [
     gallery: [
       { src: "/images/products/remote-gates/gallery-1.jpg", alt: "Remote-controlled gate motor mechanism" },
       { src: "/images/products/remote-gates/gallery-2.jpg", alt: "Boom barrier at a gated community entrance" },
+      { src: "/images/products/remote-gates/gallery-3.jpg", alt: "Automated double swing gate with linear arm motors" },
     ],
     metaTitle: "Automatic Gates & Boom Barriers | ABHEE Smart Liv",
     metaDescription:
