@@ -64,7 +64,7 @@ export default function HeroCarousel() {
         <button
           type="button"
           onClick={showPrevious}
-          className="hidden size-10 place-items-center rounded-full border border-white/35 bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
+          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
           aria-label="Show previous image"
         >
           <ChevronLeft size={18} aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function HeroCarousel() {
               type="button"
               onClick={() => setActiveSlide(index)}
               className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${
-                index === activeSlide ? "w-7 bg-white" : "w-1.5 bg-white/45 hover:bg-white/75"
+                index === activeSlide ? "w-7 bg-[#2997ff]" : "w-1.5 bg-white/45 hover:bg-white/75"
               }`}
               aria-label={`Show image ${index + 1}`}
               aria-current={index === activeSlide ? "true" : undefined}
@@ -88,7 +88,7 @@ export default function HeroCarousel() {
         <button
           type="button"
           onClick={showNext}
-          className="hidden size-10 place-items-center rounded-full border border-white/35 bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
+          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
           aria-label="Show next image"
         >
           <ChevronRight size={18} aria-hidden="true" />

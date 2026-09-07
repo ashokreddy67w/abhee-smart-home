@@ -74,25 +74,28 @@ export default function HomePage() {
         ]}
       />
 
-      {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO ---------------- */}
+      {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO (Apple DESIGN.md) ---------------- */}
       <section className="hero-enter relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-black px-6 pb-12 pt-28 md:px-10 md:pb-14 md:pt-32">
         <HeroCarousel />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1440px]">
-          <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
+          <span className="font-sans text-[12px] font-semibold tracking-[-0.224px] text-[#2997ff]">
             {PRODUCTS.length} SYSTEMS · ONE HOME
           </span>
           <h1
             id="hero-headline"
-            className="mt-5 max-w-3xl font-serif text-[42px] font-light leading-[1.05] tracking-tight sm:text-[64px] lg:text-[76px]"
+            className="mt-5 max-w-3xl font-sans text-[28px] font-semibold leading-[1.14] tracking-[-0.28px] text-white sm:text-[34px] md:text-[40px] lg:text-[56px] lg:leading-[1.07]"
           >
             The complete premium smart home.
           </h1>
-          <p id="hero-sentence" className="mt-5 max-w-md text-[15px] leading-relaxed text-white/75 sm:text-[16px]">
+          <p
+            id="hero-sentence"
+            className="mt-5 max-w-md text-[17px] font-normal leading-[1.47] tracking-[-0.374px] text-[#cccccc]"
+          >
             Automation, theatre, security and lifestyle systems, designed as one build.
           </p>
           <Link
             href="/products"
-            className="pointer-events-auto mt-8 inline-flex min-h-[44px] items-center gap-2 bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
+            className="pointer-events-auto mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#0066cc] px-[22px] py-[11px] text-[17px] font-normal text-white transition-transform duration-150 hover:bg-[#0071e3] active:scale-95"
           >
             Explore all products <ArrowRight size={15} />
           </Link>
