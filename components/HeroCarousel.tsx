@@ -58,13 +58,13 @@ export default function HeroCarousel() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/30 to-white/90" />
 
       <div className="absolute bottom-4 right-6 z-10 flex items-center gap-3 sm:bottom-12 md:bottom-14 md:right-10">
         <button
           type="button"
           onClick={showPrevious}
-          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
+          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1d1d1f] sm:grid"
           aria-label="Show previous image"
         >
           <ChevronLeft size={18} aria-hidden="true" />
@@ -76,8 +76,8 @@ export default function HeroCarousel() {
               key={slide.src}
               type="button"
               onClick={() => setActiveSlide(index)}
-              className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${
-                index === activeSlide ? "w-7 bg-[#2997ff]" : "w-1.5 bg-white/45 hover:bg-white/75"
+              className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1d1d1f] ${
+                index === activeSlide ? "w-7 bg-[#0066cc]" : "w-1.5 bg-[#1d1d1f]/25 hover:bg-[#1d1d1f]/45"
               }`}
               aria-label={`Show image ${index + 1}`}
               aria-current={index === activeSlide ? "true" : undefined}
@@ -88,7 +88,7 @@ export default function HeroCarousel() {
         <button
           type="button"
           onClick={showNext}
-          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:grid"
+          className="hidden size-11 place-items-center rounded-full bg-[#d2d2d7]/60 text-[#1d1d1f] backdrop-blur-md transition-transform duration-150 hover:bg-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1d1d1f] sm:grid"
           aria-label="Show next image"
         >
           <ChevronRight size={18} aria-hidden="true" />

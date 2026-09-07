@@ -75,21 +75,21 @@ export default function HomePage() {
       />
 
       {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO (Apple DESIGN.md) ---------------- */}
-      <section className="hero-enter relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-black px-6 pb-12 pt-28 md:px-10 md:pb-14 md:pt-32">
+      <section className="hero-enter relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-white px-6 pb-12 pt-28 md:px-10 md:pb-14 md:pt-32">
         <HeroCarousel />
         <div className="pointer-events-none relative mx-auto w-full max-w-[1440px]">
-          <span className="font-sans text-[12px] font-semibold tracking-[-0.224px] text-[#2997ff]">
+          <span className="font-sans text-[12px] font-semibold tracking-[-0.224px] text-[#0066cc]">
             {PRODUCTS.length} SYSTEMS · ONE HOME
           </span>
           <h1
             id="hero-headline"
-            className="mt-5 max-w-3xl font-sans text-[28px] font-semibold leading-[1.14] tracking-[-0.28px] text-white sm:text-[34px] md:text-[40px] lg:text-[56px] lg:leading-[1.07]"
+            className="mt-5 max-w-3xl font-sans text-[28px] font-semibold leading-[1.14] tracking-[-0.28px] text-[#1d1d1f] sm:text-[34px] md:text-[40px] lg:text-[56px] lg:leading-[1.07]"
           >
             The complete premium smart home.
           </h1>
           <p
             id="hero-sentence"
-            className="mt-5 max-w-md text-[17px] font-normal leading-[1.47] tracking-[-0.374px] text-[#cccccc]"
+            className="mt-5 max-w-md text-[17px] font-normal leading-[1.47] tracking-[-0.374px] text-[#333333]"
           >
             Automation, theatre, security and lifestyle systems, designed as one build.
           </p>

@@ -13,6 +13,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const overHero = CINEMATIC_HERO_ROUTES.includes(pathname) && !scrolled;
+  const lightHero = pathname === "/" && overHero;
 
   useEffect(() => {
     function onScroll() {
@@ -40,7 +41,7 @@ export default function Header() {
             height={453}
             priority
             className={`h-[42px] w-auto transition-[filter] duration-500 md:h-auto md:w-[220px] lg:w-[248px] xl:w-[292px] ${
-              overHero ? "drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]" : ""
+              overHero && !lightHero ? "drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]" : ""
             }`}
           />
         </Link>
@@ -48,7 +49,11 @@ export default function Header() {
           <Link
             href="/products"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Products
@@ -56,7 +61,11 @@ export default function Header() {
           <Link
             href="/solutions"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Solutions
@@ -64,7 +73,11 @@ export default function Header() {
           <Link
             href="/projects"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Projects
@@ -72,7 +85,11 @@ export default function Header() {
           <Link
             href="/gallery"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Gallery
@@ -80,7 +97,11 @@ export default function Header() {
           <Link
             href="/locations"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Locations
@@ -88,7 +109,11 @@ export default function Header() {
           <Link
             href="/blog"
             className={`text-[14px] font-medium tracking-[0.01em] transition-colors xl:text-[15px] ${
-              overHero ? "text-white/85 hover:text-white" : "text-black/65 hover:text-[#5877BC]"
+              lightHero
+                ? "text-[#1d1d1f]/80 hover:text-[#0066cc]"
+                : overHero
+                  ? "text-white/85 hover:text-white"
+                  : "text-black/65 hover:text-[#5877BC]"
             }`}
           >
             Journal
@@ -97,14 +122,16 @@ export default function Header() {
         <Link
           href="/contact"
           className={`hidden min-h-[46px] items-center justify-self-end rounded-full px-6 py-3 text-[11px] font-medium uppercase tracking-[0.16em] transition lg:inline-flex xl:px-7 xl:text-[12px] ${
-            overHero
-              ? "border border-white/40 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-black"
-              : "bg-[#5877BC] text-white shadow-sm hover:bg-[#3F5D84]"
+            lightHero
+              ? "bg-[#0066cc] text-white shadow-sm hover:bg-[#0071e3]"
+              : overHero
+                ? "border border-white/40 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-black"
+                : "bg-[#5877BC] text-white shadow-sm hover:bg-[#3F5D84]"
           }`}
         >
           Book a visit
         </Link>
-        <MobileNav overHero={overHero} />
+        <MobileNav overHero={overHero} lightHero={lightHero} />
       </div>
     </header>
   );

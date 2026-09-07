@@ -26,7 +26,13 @@ function isLinkActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export default function MobileNav({ overHero = false }: { overHero?: boolean }) {
+export default function MobileNav({
+  overHero = false,
+  lightHero = false,
+}: {
+  overHero?: boolean;
+  lightHero?: boolean;
+}) {
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [canPortal, setCanPortal] = useState(false);
@@ -195,7 +201,11 @@ export default function MobileNav({ overHero = false }: { overHero?: boolean }) 
         aria-expanded={mounted}
         aria-controls="mobile-nav-panel"
         className={`flex h-11 w-11 items-center justify-center justify-self-end transition-colors lg:hidden ${
-          overHero ? "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] hover:text-white/80" : "text-black/70 hover:text-[#5877BC]"
+          lightHero
+            ? "text-[#1d1d1f] hover:text-[#0066cc]"
+            : overHero
+              ? "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] hover:text-white/80"
+              : "text-black/70 hover:text-[#5877BC]"
         }`}
       >
         <Menu size={26} />
