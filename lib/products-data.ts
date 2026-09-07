@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
     line: "Cinema-grade sound and picture, built into your walls.",
     category: "Entertainment",
     heroImage: "/images/products/home-theatre/hero.jpg",
-   
+    heroImageAlt: "Home theatre room with a large screen and ambient LED lighting",
     gallery: [
       { src: "/images/products/home-theatre/gallery-1.jpg", alt: "Home theatre room with ambient LED lighting" },
       { src: "/images/products/home-theatre/gallery-2.jpg", alt: "Acoustic wall panels in a private cinema" },
