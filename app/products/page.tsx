@@ -27,6 +27,7 @@ export default function ProductsIndexPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Catalogue"
               title={`${PRODUCTS.length} systems, one home`}
               sentence="Every category ABHEE designs, installs and supports."

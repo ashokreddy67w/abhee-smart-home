@@ -28,6 +28,7 @@ export default function LocationsPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Where we work"
               title="Four cities, one standard"
               sentence="ABHEE installs and supports every system in person, not remotely."

@@ -27,6 +27,7 @@ export default function BrandsPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Brands"
               title="Technology partners we build with"
               sentence="ABHEE sources hardware from trusted partners across every category we install."

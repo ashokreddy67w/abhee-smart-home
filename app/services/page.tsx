@@ -27,6 +27,7 @@ export default function ServicesIndexPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Services"
               title="Every installation, done properly"
               sentence="From site survey to handover and AMC — a dedicated service page for every system we install."

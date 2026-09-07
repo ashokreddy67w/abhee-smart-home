@@ -19,6 +19,7 @@ export default function BlogIndexPage() {
       <div className="mx-auto max-w-[1440px]">
         <Reveal>
           <SectionIntro
+            dark={false}
             label="Journal"
             title="Straight answers, no sales pitch"
           />

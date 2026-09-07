@@ -26,6 +26,7 @@ export default function GalleryPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Gallery"
               title="See the work"
               sentence="Filter by category to see ABHEE installations across homes, campuses and venues."

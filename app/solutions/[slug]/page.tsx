@@ -125,7 +125,7 @@ export default async function SolutionPage({ params }: PageProps) {
       {/* Why points */}
       <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
-          <SectionIntro label="Why ABHEE" title={`Why ${solution.name.toLowerCase()} choose us`} />
+          <SectionIntro dark={false} label="Why ABHEE" title={`Why ${solution.name.toLowerCase()} choose us`} />
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-4">
             {solution.whyPoints.map((w) => (
               <Reveal key={w.title}>

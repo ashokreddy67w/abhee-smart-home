@@ -8,6 +8,7 @@ export default function SectionIntro({
   ctaLabel,
   ctaHref,
   align = "left",
+  dark = true,
 }: {
   label: string;
   title: string;
@@ -15,6 +16,8 @@ export default function SectionIntro({
   ctaLabel?: string;
   ctaHref?: string;
   align?: "left" | "center";
+  /** Set false when this sits on a light/white section — defaults to true (white text) for dark hero/image backgrounds. */
+  dark?: boolean;
 }) {
   return (
     <div
@@ -26,12 +29,16 @@ export default function SectionIntro({
         {label}
       </span>
 
-      <h2 className="max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight text-white sm:text-[40px]">
+      <h2
+        className={`max-w-2xl font-serif text-[28px] font-light leading-tight tracking-tight sm:text-[40px] ${
+          dark ? "text-white" : "text-slate-900"
+        }`}
+      >
         {title}
       </h2>
 
       {sentence && (
-        <p className="max-w-md text-[15px] leading-relaxed text-white/70">
+        <p className={`max-w-md text-[15px] leading-relaxed ${dark ? "text-white/70" : "text-slate-600"}`}>
           {sentence}
         </p>
       )}
@@ -39,7 +46,9 @@ export default function SectionIntro({
       {ctaLabel && ctaHref && (
         <Link
           href={ctaHref}
-          className="mt-2 inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.14em] text-[#5877BC] transition-colors duration-300 hover:text-[#84A6D9]"
+          className={`mt-2 inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.14em] text-[#5877BC] transition-colors duration-300 ${
+            dark ? "hover:text-[#84A6D9]" : "hover:text-[#3F5D84]"
+          }`}
         >
           {ctaLabel}
           <ArrowRight size={15} />

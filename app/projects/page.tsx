@@ -27,6 +27,7 @@ export default function ProjectsIndexPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Projects"
               title="Recent installations"
               sentence="A sample of ABHEE builds across homes, communities, campuses and venues."

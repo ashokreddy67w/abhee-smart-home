@@ -27,6 +27,7 @@ export default function SolutionsIndexPage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Solutions"
               title="Built for your industry"
               sentence="The same 16 systems, tailored to the way each industry actually operates."

@@ -120,6 +120,7 @@ export default async function CityPage({ params }: PageProps) {
       <section className="px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
           <SectionIntro
+            dark={false}
             label="Areas we cover"
             title={`${city.name}, end to end`}
             sentence={`Serving ${city.areas
@@ -148,7 +149,7 @@ export default async function CityPage({ params }: PageProps) {
       {/* Why choose ABHEE in this city */}
       <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-20">
         <div className="mx-auto max-w-[1440px]">
-          <SectionIntro label="Why ABHEE" title={`Why ${city.name} chooses ABHEE`} />
+          <SectionIntro dark={false} label="Why ABHEE" title={`Why ${city.name} chooses ABHEE`} />
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-4">
             {city.whyPoints.map((w) => (
               <Reveal key={w.title}>

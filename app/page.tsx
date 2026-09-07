@@ -13,6 +13,7 @@ import ProductCard from "@/components/ProductCard";
 import SectionIntro from "@/components/SectionIntro";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
+import HeroCarousel from "@/components/HeroCarousel";
 import { organizationSchema, localBusinessSchema, speakableSchema, faqSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ABHEE Smart Home Systems | Smart Liv",
     description:
-      "The complete premium smart home — automation, theatre, security and lifestyle systems, in one integrated build.",
+      " automation, theatre, security and lifestyle systems, in one integrated build.",
     url: SITE.url,
     siteName: SITE.name,
     images: [{ url: "/images/og/default.jpg" }],
@@ -74,16 +75,9 @@ export default function HomePage() {
       />
 
       {/* ---------------- 1. FULL-WIDTH CINEMATIC HERO ---------------- */}
-      <section className="hero-enter relative flex min-h-[78svh] flex-col justify-end overflow-hidden bg-black px-6 pb-12 pt-28 md:min-h-[94svh] md:px-10 md:pb-14 md:pt-32">
-        <Image
-          src="/images/home/hero.jpg"
-          alt="A premium automated residence at night, lit entirely by ABHEE smart lighting"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
-        <div className="relative mx-auto w-full max-w-[1440px]">
+      <section className="hero-enter relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-black px-6 pb-12 pt-28 md:px-10 md:pb-14 md:pt-32">
+        <HeroCarousel />
+        <div className="pointer-events-none relative mx-auto w-full max-w-[1440px]">
           <span className="font-mono text-[11px] tracking-[0.2em] text-[#5877BC]">
             {PRODUCTS.length} SYSTEMS · ONE HOME
           </span>
@@ -98,7 +92,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/products"
-            className="mt-8 inline-flex min-h-[44px] items-center gap-2 bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
+            className="pointer-events-auto mt-8 inline-flex min-h-[44px] items-center gap-2 bg-[#5877BC] px-6 py-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
             Explore all products <ArrowRight size={15} />
           </Link>
@@ -110,6 +104,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="The range"
               title="Every system, in one place"
               sentence={`${PRODUCTS.length} premium categories, each built to work together.`}
@@ -147,6 +142,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={100}>
             <SectionIntro
+              dark={false}
               label="Design philosophy"
               title="Built around how you live, not how it looks in a brochure"
               sentence="Every system is chosen for daily use — not just for demo day."
@@ -162,6 +158,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="The ABHEE standard"
               title="One quality bar, every room"
               sentence="From living rooms to boardrooms, the same finish throughout."
@@ -206,6 +203,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Why ABHEE"
               title="One team, from design to after-sales"
               sentence="A single point of contact for every system in your home."
@@ -276,6 +274,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Services"
               title="Installed properly, supported after"
               sentence="A dedicated service page for every system, with a fixed process and AMC support."
@@ -302,6 +301,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Solutions"
               title="Industries we serve"
               sentence="The same systems, tailored to villas, communities, campuses and venues."
@@ -329,6 +329,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Projects"
               title="Recent installations"
               sentence="A sample of ABHEE builds across homes, communities, campuses and venues."
@@ -354,7 +355,7 @@ export default function HomePage() {
       <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
-            <SectionIntro label="Testimonials" title="What clients tell us" />
+            <SectionIntro dark={false} label="Testimonials" title="What clients tell us" />
           </Reveal>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3 md:mt-10 md:gap-8">
             {PROJECTS.slice(0, 3).map((p, i) => (
@@ -373,6 +374,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Gallery"
               title="See the work"
               sentence="Browse installations by category — home theatre, automation, CCTV and more."
@@ -403,6 +405,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
             <SectionIntro
+              dark={false}
               label="Brands"
               title="Technology partners we build with"
               ctaLabel="View all partners"
@@ -423,7 +426,7 @@ export default function HomePage() {
       <section className="border-t border-slate-200 px-6 py-12 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <Reveal>
-            <SectionIntro label="FAQ" title="Common questions" ctaLabel="Read more in our Journal" ctaHref="/blog" />
+            <SectionIntro dark={false} label="FAQ" title="Common questions" ctaLabel="Read more in our Journal" ctaHref="/blog" />
           </Reveal>
           <div className="mt-8 divide-y divide-slate-200 md:mt-10">
             {homeFaqs.map((f) => (

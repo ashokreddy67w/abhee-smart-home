@@ -21,7 +21,7 @@ export default function ContactPage() {
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black" />
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal>
           <SectionIntro
